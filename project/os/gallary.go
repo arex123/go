@@ -13,23 +13,15 @@ import (
 	"io/ioutil"
 	"log"
 	"strings"
-
-	// "fyne.io/fyne/v2/app"
-	// "fyne.io/fyne/v2"
 	"fyne.io/fyne/v2"
-	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/canvas"
-
-	// "fyne.io/fyne/v2/theme"
-	// "fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
-	// "fyne.io/fyne/v2/widget"
 )
 
-func gallaryApp() {
-	a := app.New()
-	w := a.NewWindow("Hello")
-	w.Resize(fyne.NewSize(300,300))
+func gallaryApp(w fyne.Window) {
+	// a := app.New()
+	// w := a.NewWindow("Hello")
+	// w.Resize(fyne.NewSize(300,300))
 	src_path:= "C:\\Users\\dell\\Pictures\\Saved Pictures";
 	files, err := ioutil.ReadDir(src_path)
     if err != nil {
@@ -56,11 +48,11 @@ func gallaryApp() {
     }
 
 		
-	w.SetContent(tabs)
+	// w.SetContent(tabs)
 	// image := canvas.NewImageFromFile(picsArr[0])
 	// w.SetContent(container.NewVBox(image,tabs))
 	// w.SetContent(image)
-	w.SetContent(container.NewBorder(panelContent,nil,nil,nil,gallaryContainer),)
+	w.SetContent(container.NewBorder(panelContent,nil,nil,nil,tabs),)
 	
-	w.ShowAndRun()
+	w.Show()
 }

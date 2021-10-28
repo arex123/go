@@ -3,6 +3,7 @@ package main
 
 import (
 	// "fyne.io/fyne/v2"
+	"fmt"
 	"strconv"
 
 	"fyne.io/fyne/v2"
@@ -173,6 +174,7 @@ func main() {
 			output="error"
 		}
 		input.SetText(output)
+		fmt.Println(historyArr)
 
 
 	})

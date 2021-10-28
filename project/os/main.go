@@ -4,9 +4,9 @@ import (
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/canvas"	
-	"fyne.io/fyne/container"
+	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/theme"
-	"fyne.io/fyne/widget"
+	"fyne.io/fyne/v2/widget"
 )
 
 var myApp fyne.App = app.New()
@@ -35,11 +35,11 @@ func main(){
 	})
 
 	btn3 = widget.NewButtonWithIcon("calculator",theme.ContentAddIcon(),func() {
-		calculatorApp(myWindow)
+		calculatorApp()
 	})
 
 	btn4 = widget.NewButtonWithIcon("Gallery App",theme.GridIcon(),func() {
-		galleryApp(myWindow)
+		gallaryApp(myWindow)
 	})
 
 

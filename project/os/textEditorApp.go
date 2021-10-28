@@ -10,7 +10,6 @@ import (
 
 	"fyne.io/fyne/v2"
 	// "fyne.io/fyne/v2/app"
-	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/storage"
@@ -19,8 +18,9 @@ import (
 
 var count int= 1
 func textEditor() {
-	a := app.New()
-	w := a.NewWindow("Hello")
+
+	w:=myApp.NewWindow("Text Editor");
+
 	w.Resize(fyne.NewSize(600,600))
 
 	content:= container.NewVBox(
@@ -93,19 +93,18 @@ func textEditor() {
 	})
 
 
-	w.SetContent(
+	EditorContainer:=container.NewVBox(
 		container.NewVBox(
 			content,
 			input,
-
 			container.NewHBox(
 				saveBtn,
 				openBtn,
 			),
-		),
-	)
+		),)
+	
 
-	w.SetContent(container.NewBorder(panelContent,nil,nil,nil,EditorContainer),)
+	w.SetContent(container.NewBorder(DeskBtn,nil,nil,nil,EditorContainer),)
 
-	w.ShowAndRun()
+	w.Show()
 }

@@ -51,18 +51,19 @@ func showWeatherApp(w fyne.Window) {
 	label3:= canvas.NewText(fmt.Sprintf("Wind Speed %.2f",weather.Wind.Speed),color.White)
 	label4:= canvas.NewText(fmt.Sprintf("Temperature %2f",weather.Main.Temp),color.White)
 
-	w.SetContent(
+	weatherContainer:=
 		container.NewVBox(
 			label1,
 			img,
 			label2,
 			label3,
 			label4,
-		),
-	)
+			container.NewGridWithColumns(1,),
+		)
+	
 
 	w.SetContent(container.NewBorder(panelContent,nil,nil,nil,weatherContainer),)
-	w.ShowAndRun()
+	w.Show()
 }
 
 

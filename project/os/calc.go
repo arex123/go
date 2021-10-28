@@ -182,7 +182,11 @@ func calculatorApp() {
 
 	})
 
-	w.SetContent(container.NewVBox(
+	equalBtn.Importance = widget.HighImportance
+
+
+	calcContainer:=container.NewVBox(
+		container.NewVBox(
 		input,
 		history,
 		container.NewGridWithColumns(1,
@@ -231,6 +235,9 @@ func calculatorApp() {
 				
 		),),),
 	)
+
+
+
 	w.Resize(fyne.NewSize(500,280));
 
 	w.SetContent(
