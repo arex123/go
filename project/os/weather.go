@@ -47,9 +47,9 @@ func showWeatherApp(w fyne.Window) {
 	label1:=canvas.NewText("weather Details",color.White)
 	label1.TextStyle =fyne.TextStyle{Bold: true}
 
-	label2:= canvas.NewText(fmt.Sprintf("Country %s",weather.Sys.Country),color.White)
-	label3:= canvas.NewText(fmt.Sprintf("Wind Speed %.2f",weather.Wind.Speed),color.White)
-	label4:= canvas.NewText(fmt.Sprintf("Temperature %2f",weather.Main.Temp),color.White)
+	label2:= canvas.NewText(fmt.Sprintf("Country %s",weather.Sys.Country),color.Black)
+	label3:= canvas.NewText(fmt.Sprintf("Wind Speed %.2f",weather.Wind.Speed),color.Black)
+	label4:= canvas.NewText(fmt.Sprintf("Temperature %2f",weather.Main.Temp),color.Black)
 
 	weatherContainer:=
 		container.NewVBox(
@@ -58,7 +58,7 @@ func showWeatherApp(w fyne.Window) {
 			label2,
 			label3,
 			label4,
-			container.NewGridWithColumns(1,),
+			// container.NewGridWithColumns(1,),
 		)
 	
 
