@@ -13,7 +13,7 @@ import (
 	"github.com/Knetic/govaluate"
 )
 
-func mainInBranch3() {
+func mainInBranch4() {
 	a := app.New()
 	w := a.NewWindow("Calculator")
 	w.Resize(fyne.NewSize(500,300))
